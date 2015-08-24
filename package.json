@@ -8,8 +8,6 @@
   },
   "scripts": {
     "test": "node test/index.js",
-    "is_formatted": "find . -name '*.js' | grep -v node_modules | grep -v coverage | xargs jscs --preset=google",
-    "is_linted": "find . -name '*.js' | grep -v node_modules | grep -v coverage | xargs eslint",
     "coverage": "istanbul cover test/index.js && istanbul check-coverage"
   },
   "author": "Hassy Veldstra <h@veldstra.org>",
@@ -33,19 +31,14 @@
     "api_auth": "0.0.2-4"
   },
   "devDependencies": {
-    "eslint": "^0.24.0",
     "interfake": "^1.13.0",
     "istanbul": "^0.3.17",
     "nock": "^2.7.0",
-    "pre-commit": "^1.0.10",
     "tape": "^4.0.0"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/artilleryio/minigun-core.git"
   },
-  "pre-commit": [
-    "is_linted",
-    "is_formatted"
-  ]
+  "
 }
